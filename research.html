@@ -1,78 +1,76 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Research — Tianyu Han</title>
-  <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#040a15">
+<title>Research — Tianyu Han</title>
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
 
+<div class="space-bg" aria-hidden="true">
+  <div class="nebula n1"></div>
+  <div class="nebula n2"></div>
+  <div class="nebula n3"></div>
+  <div class="planet"></div>
+</div>
+<div class="space-overlay" aria-hidden="true"></div>
+
+
 <nav class="nav">
   <div class="container nav-inner">
-    <div class="brand">Tianyu Han</div>
+    <a class="brand" href="index.html">Tianyu Han</a>
     <div class="nav-links"><a class="" href="index.html">Home</a><a class="active" href="research.html">Research</a><a class="" href="publications.html">Publications</a></div>
   </div>
 </nav>
 
+
 <div class="container page-wrap">
-  <section class="page-panel">
+  <section class="page-head">
     <h1>Research</h1>
     <p>
-      My research agenda is broader than any single antenna concept. I am interested in how spatial structure,
-      incomplete information, distributed operation, and non-terrestrial links reshape future wireless communication systems.
+      My research is centered on theoretical and analytical problems in future wireless communication systems.
+      Reconfigurable antennas are one part of this agenda rather than the identity of the overall research programme.
     </p>
   </section>
 
-  <section class="academic-grid" style="grid-template-columns:1fr;margin-top:20px">
-    <div>
-      <div class="academic-card">
-        <h2>Wireless Communication Theory</h2>
-        <p>
-          A major part of my work develops mathematical models that explain how geometry, fading, interference,
-          and receiver architecture determine reliability and achievable rate. The objective is not only to obtain formulas,
-          but also to extract physical insight.
-        </p>
-      </div>
+  <div class="content-stack">
+    <section class="paper-page">
+      <h2>Wireless Communication Theory</h2>
+      <p>
+        I study mathematical models that explain how fading, geometry, interference, and receiver architecture
+        determine reliability and achievable rate. A key objective is to obtain results with clear physical interpretation.
+      </p>
 
-      <div class="academic-card">
-        <h2>Channel Inference & Reconstruction</h2>
-        <p>
-          Full channel acquisition is often expensive. I therefore study how useful channel information can be inferred from
-          partial observations, historical CSI, or known physical structure. This includes semi-blind strategies and
-          structured reconstruction methods.
-        </p>
-      </div>
+      <h2>Channel Inference & Reconstruction</h2>
+      <p>
+        Full channel acquisition can be expensive. I therefore study how useful channel information can be recovered from
+        partial observations, historical CSI, and known physical structure, including semi-blind and structured reconstruction approaches.
+      </p>
 
-      <div class="academic-card">
-        <h2>Distributed Wireless Networks</h2>
-        <p>
-          Distributed architectures such as cell-free systems create new interactions between local antenna behavior,
-          interference, and scalability. I study how these effects can be modeled and exploited at the network level.
-        </p>
-      </div>
+      <h2>Distributed Wireless Networks</h2>
+      <p>
+        Distributed architectures such as cell-free networks introduce new interactions between local antenna behavior,
+        interference, and network scalability. I study these effects through tractable analytical models.
+      </p>
 
-      <div class="academic-card">
-        <h2>Satellite & Non-Terrestrial Communications</h2>
-        <p>
-          Non-terrestrial systems introduce different spatial and hardware constraints from terrestrial networks.
-          My work in this area studies compact receive architectures, multi-user satellite links, and analytical
-          design principles for future NTN systems.
-        </p>
-      </div>
+      <h2>Satellite & Non-Terrestrial Communications</h2>
+      <p>
+        Non-terrestrial systems impose different spatial and hardware constraints from terrestrial networks.
+        My work in this area studies compact receive architectures, multi-user satellite links, and analytical design principles.
+      </p>
 
-      <div class="academic-card">
-        <h2>Reconfigurable Spatial Systems</h2>
-        <p>
-          Reconfigurable antenna concepts, including fluid antenna systems, appear in part of my research because they provide
-          a useful way to study spatial degrees of freedom. They are one technique within a wider research agenda rather than
-          the identity of this website.
-        </p>
-      </div>
-    </div>
-  </section>
+      <h2>Reconfigurable Spatial Systems</h2>
+      <p>
+        Reconfigurable antenna concepts, including fluid antenna systems, appear in part of my work because they provide
+        a useful platform for studying spatial degrees of freedom. They remain one component of a broader research agenda.
+      </p>
+    </section>
+  </div>
 </div>
+
 <footer class="footer">© 2026 Tianyu Han · Personal academic website</footer>
+<script src="assets/site.js"></script>
 </body>
 </html>

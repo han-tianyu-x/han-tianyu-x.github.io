@@ -1,0 +1,315 @@
+
+:root{
+  --ink:#eef4ff;
+  --muted:#b8c6dc;
+  --soft:#91a8c9;
+  --line:rgba(255,255,255,.15);
+  --panel:rgba(7,16,33,.62);
+  --panel-strong:rgba(7,16,33,.74);
+  --blue:#a9ccff;
+  --blue-strong:#dcecff;
+  --max:1220px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  min-height:100vh;
+  color:var(--ink);
+  font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  background:#040a15;
+  overflow-x:hidden;
+}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+img{max-width:100%;display:block}
+.container{width:min(var(--max),calc(100% - 56px));margin:auto;position:relative;z-index:2}
+
+/* ---------- animated universe background ---------- */
+.space-bg{
+  position:fixed;inset:0;z-index:0;overflow:hidden;
+  background:
+    radial-gradient(1100px 720px at 84% 12%,rgba(72,130,255,.24),transparent 54%),
+    radial-gradient(840px 600px at 13% 78%,rgba(142,91,255,.18),transparent 55%),
+    radial-gradient(760px 500px at 72% 88%,rgba(72,203,255,.12),transparent 55%),
+    linear-gradient(180deg,#020712 0%,#071225 42%,#08162c 100%);
+}
+.space-bg::before,
+.space-bg::after{
+  content:"";
+  position:absolute;
+  inset:-22%;
+  background-repeat:repeat;
+  will-change:transform;
+}
+.space-bg::before{
+  background-image:
+    radial-gradient(2px 2px at 20px 30px,rgba(255,255,255,.95),transparent 60%),
+    radial-gradient(1.4px 1.4px at 90px 110px,rgba(255,255,255,.90),transparent 60%),
+    radial-gradient(2.2px 2.2px at 160px 70px,rgba(255,255,255,.85),transparent 60%),
+    radial-gradient(1.5px 1.5px at 220px 150px,rgba(255,255,255,.82),transparent 60%),
+    radial-gradient(1.8px 1.8px at 280px 40px,rgba(255,255,255,.94),transparent 60%),
+    radial-gradient(2.1px 2.1px at 340px 120px,rgba(255,255,255,.84),transparent 60%);
+  background-size:380px 220px;
+  animation:starsA 105s linear infinite;
+  opacity:.94;
+}
+.space-bg::after{
+  background-image:
+    radial-gradient(1.1px 1.1px at 50px 50px,rgba(196,224,255,.95),transparent 60%),
+    radial-gradient(1.3px 1.3px at 130px 130px,rgba(255,255,255,.88),transparent 60%),
+    radial-gradient(1px 1px at 240px 90px,rgba(255,255,255,.80),transparent 60%),
+    radial-gradient(1.2px 1.2px at 310px 180px,rgba(188,218,255,.82),transparent 60%);
+  background-size:360px 260px;
+  animation:starsB 165s linear infinite reverse;
+  opacity:.58;
+}
+.nebula{
+  position:absolute;border-radius:50%;
+  filter:blur(38px);
+  mix-blend-mode:screen;
+  pointer-events:none;
+}
+.n1{
+  width:430px;height:430px;left:-45px;top:165px;
+  background:radial-gradient(circle,rgba(105,171,255,.55),rgba(105,171,255,0) 70%);
+  animation:nebulaA 17s ease-in-out infinite;
+}
+.n2{
+  width:560px;height:560px;right:-130px;top:30px;
+  background:radial-gradient(circle,rgba(174,128,255,.38),rgba(174,128,255,0) 68%);
+  animation:nebulaB 19s ease-in-out infinite;
+}
+.n3{
+  width:470px;height:470px;right:160px;bottom:-40px;
+  background:radial-gradient(circle,rgba(76,207,255,.25),rgba(76,207,255,0) 70%);
+  animation:nebulaC 23s ease-in-out infinite;
+}
+.planet{
+  position:absolute;
+  right:7%;
+  top:15%;
+  width:248px;
+  height:248px;
+  border-radius:50%;
+  background:radial-gradient(circle at 30% 28%,#fff5dc 0%,#cfe1ff 27%,#89a8db 60%,#526fa5 100%);
+  box-shadow:0 0 115px rgba(130,173,255,.27);
+  opacity:.84;
+  animation:planetFloat 13s ease-in-out infinite;
+}
+.planet::before,.planet::after{
+  content:"";position:absolute;left:50%;top:50%;
+  transform:translate(-50%,-50%) rotate(-8deg);
+  border-radius:50%;
+}
+.planet::before{
+  width:370px;height:82px;border:7px solid rgba(242,247,255,.72)
+}
+.planet::after{
+  width:420px;height:96px;border:2px solid rgba(213,228,255,.42)
+}
+.space-overlay{
+  position:fixed;inset:0;z-index:1;pointer-events:none;
+  background:
+    linear-gradient(180deg,rgba(2,7,16,.16),rgba(2,7,16,.24)),
+    radial-gradient(1000px 720px at 50% 46%,transparent 36%,rgba(1,5,12,.12) 100%);
+}
+
+@keyframes starsA{from{transform:translate3d(0,0,0)}to{transform:translate3d(-260px,-170px,0)}}
+@keyframes starsB{from{transform:translate3d(0,0,0)}to{transform:translate3d(220px,-130px,0)}}
+@keyframes nebulaA{0%,100%{transform:translate(0,0)}50%{transform:translate(30px,-24px)}}
+@keyframes nebulaB{0%,100%{transform:translate(0,0)}50%{transform:translate(-32px,26px)}}
+@keyframes nebulaC{0%,100%{transform:translate(0,0)}50%{transform:translate(20px,-18px)}}
+@keyframes planetFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(18px)}}
+
+/* ---------- navigation ---------- */
+.nav{
+  position:sticky;top:0;z-index:10;
+  background:rgba(3,9,21,.44);
+  border-bottom:1px solid rgba(255,255,255,.08);
+  backdrop-filter:blur(15px)
+}
+.nav-inner{height:68px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{font-size:18px;font-weight:720;letter-spacing:.03em;text-transform:uppercase;color:#fff}
+.nav-links{display:flex;gap:6px;flex-wrap:wrap}
+.nav-links a{
+  padding:8px 12px;border-radius:999px;
+  font-size:12px;text-transform:uppercase;letter-spacing:.09em;color:#dce8fa
+}
+.nav-links a.active,.nav-links a:hover{background:rgba(255,255,255,.10);text-decoration:none}
+
+/* ---------- homepage ---------- */
+.hero{padding:50px 0 26px}
+.hero-shell{
+  min-height:350px;
+  padding:32px 34px;
+  display:grid;
+  grid-template-columns:280px minmax(0,1fr);
+  gap:34px;
+  align-items:center;
+  background:linear-gradient(135deg,rgba(6,16,34,.67),rgba(7,16,32,.40));
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:24px;
+  backdrop-filter:blur(15px);
+  box-shadow:0 24px 80px rgba(0,0,0,.18)
+}
+.portrait{
+  width:100%;
+  aspect-ratio:4/5;
+  object-fit:cover;
+  border-radius:22px;
+  border:1px solid rgba(255,255,255,.16);
+  background:#0d1d33
+}
+.badge{
+  display:inline-block;
+  padding:7px 11px;
+  border-radius:999px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.14);
+  font-size:11px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:#d6e5ff
+}
+.hero h1{
+  margin:16px 0 10px;
+  font-size:clamp(44px,5.2vw,72px);
+  line-height:.96;
+  letter-spacing:-.05em;
+  text-transform:uppercase
+}
+.hero .role{font-size:23px;color:#d7e4f9;letter-spacing:-.02em}
+.hero .bio{
+  max-width:790px;margin-top:16px;
+  color:var(--muted);font-size:16px;line-height:1.82
+}
+.hero .mini{margin-top:16px;display:flex;gap:10px;flex-wrap:wrap}
+.hero .mini span{
+  padding:8px 10px;border-radius:999px;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.10);
+  font-size:13px;color:#d8e5f8
+}
+
+.layout{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 320px;
+  gap:22px;
+  padding-bottom:36px
+}
+.section-card,.side-card,.page-head,.paper-page,.pub-panel{
+  background:linear-gradient(180deg,rgba(7,16,33,.66),rgba(7,16,33,.56));
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:18px;
+  backdrop-filter:blur(14px);
+  box-shadow:0 16px 48px rgba(0,0,0,.15)
+}
+.section-card{padding:22px 24px}
+.section-card + .section-card{margin-top:18px}
+.section-card h2,.page-head h1,.paper-page h1,.pub-panel h2{
+  margin:0 0 12px;color:#f3f7ff;letter-spacing:-.03em
+}
+.section-card h2,.pub-panel h2{font-size:28px}
+.section-card p,.section-card li,.side-card p,.paper-page p,.paper-page li,.page-head p,.pub-entry{
+  color:var(--muted);font-size:15px;line-height:1.82
+}
+.interests{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.interest{
+  padding:14px 15px;border-radius:14px;
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.03)
+}
+.interest strong{display:block;margin-bottom:6px;color:#eef5ff;font-size:14px}
+.interest span{color:#aebdd4;font-size:14px;line-height:1.7}
+.pub-list{display:grid;gap:12px}
+.pub-item{
+  padding:14px 15px;border-radius:14px;
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.03)
+}
+.pub-item .t{font-size:16px;font-weight:650;line-height:1.55;color:#f0f6ff}
+.pub-item .m{margin-top:5px;font-size:14px;color:#aebdd4;line-height:1.66}
+.side-stack{display:grid;gap:18px}
+.side-card{padding:18px}
+.side-card .st{font-size:11px;text-transform:uppercase;letter-spacing:.12em;color:#90a7ca;margin-bottom:8px}
+.side-card .sv{color:#d8e6f9;font-size:14px;line-height:1.75}
+
+/* ---------- normal academic pages ---------- */
+.page-wrap{padding:28px 0 38px}
+.page-head{padding:24px 26px}
+.page-head h1{font-size:42px}
+.page-head p{margin-bottom:0}
+.content-stack{display:grid;gap:16px;margin-top:18px}
+.paper-page{padding:22px 24px}
+.paper-page h1{font-size:34px}
+.paper-page h2{
+  margin:24px 0 8px;
+  color:#f1f6ff;
+  font-size:22px;
+  letter-spacing:-.02em
+}
+.paper-page h2:first-of-type{margin-top:10px}
+.meta{
+  color:#aebdd4;font-size:14px;line-height:1.72
+}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:36px;padding:0 11px;
+  border-radius:9px;
+  border:1px solid rgba(255,255,255,.14);
+  background:rgba(255,255,255,.06);
+  color:#dbe9ff;
+  font-size:13px
+}
+.btn.primary{background:#e9f2ff;color:#17345d;border-color:#e9f2ff}
+.btn:hover{text-decoration:none;background:rgba(255,255,255,.12)}
+.btn.primary:hover{background:#fff}
+
+/* Publications: list-forward, inspired by conventional academic pages */
+.pub-panel{padding:22px 24px}
+.pub-section + .pub-section{margin-top:28px;padding-top:24px;border-top:1px solid rgba(255,255,255,.12)}
+.pub-section h2{margin-bottom:14px}
+.pub-subhead{
+  margin:16px 0 8px;
+  color:#dce8fa;
+  font-size:15px;
+  font-weight:700
+}
+.pub-entry{
+  padding:10px 0 12px;
+  border-bottom:1px solid rgba(255,255,255,.08)
+}
+.pub-entry:last-child{border-bottom:0}
+.pub-entry .num{
+  display:inline-block;min-width:34px;color:#8facd3;font-weight:700
+}
+.pub-entry strong{color:#eef5ff}
+.pub-entry .links{white-space:nowrap}
+.pub-entry .links a{margin-right:8px}
+
+.footer{
+  padding:10px 0 28px;
+  text-align:center;
+  color:#98abc7;
+  font-size:13px;
+  position:relative;z-index:2
+}
+
+@media(max-width:960px){
+  .hero-shell{grid-template-columns:1fr}
+  .portrait{max-width:240px}
+  .layout{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+  .container{width:min(var(--max),calc(100% - 22px))}
+  .nav-inner{padding:10px 0;height:auto;align-items:flex-start}
+  .hero-shell{padding:22px}
+  .hero h1{font-size:40px}
+  .interests{grid-template-columns:1fr}
+  .planet{opacity:.56;right:-90px}
+}
+@media(prefers-reduced-motion:reduce){
+  .space-bg::before,.space-bg::after,.nebula,.planet{animation:none!important}
+}

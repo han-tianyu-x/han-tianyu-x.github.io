@@ -1,18 +1,27 @@
-# Tianyu Han — Full-Screen Bright Academic Website
+# Tianyu Han — NASA/SpaceX-style Academic Website
 
-Complete static website.
+Complete static GitHub Pages website.
 
-Design:
-- Full-screen universe background across the entire site
-- No ocean imagery
-- Bright cosmic palette: pale blue, lavender, white, and soft gold
-- Conventional academic layout inspired by concise faculty/personal academic pages
-- No unnecessary scroll indicator or cinematic full-screen sections
-- Homepage includes a dedicated portrait area
-- Publications and research remain separate pages
+## Structure
+- `index.html` — homepage
+- `research.html` — research page
+- `publications.html` — compact academic publication list
+- `papers/` — individual paper pages
+- `assets/site.css` — full visual design and animated universe
+- `assets/site.js` — subtle pointer parallax
+- `assets/profile.svg` — temporary portrait image
 
-Portrait:
-- The site currently uses assets/profile.svg
-- Replace that file with your own portrait, or change the src in index.html.
+## Replace the portrait
+Put your portrait in `assets/`, e.g. `assets/profile.jpg`, then change this line in `index.html`:
 
-Upload all contents of this folder to the GitHub Pages repository root.
+`<img class="portrait" src="assets/profile.svg" alt="Portrait of Tianyu Han">`
+
+to:
+
+`<img class="portrait" src="assets/profile.jpg" alt="Portrait of Tianyu Han">`
+
+## GitHub Pages
+Upload the CONTENTS of this folder to the repository root.
+`index.html` must remain directly in the repository root.
+
+No npm, React, build tools, or backend are required.
