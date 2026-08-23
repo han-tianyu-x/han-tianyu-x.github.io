@@ -3,201 +3,139 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#05070a">
   <meta name="description" content="Tianyu Han — PhD researcher in wireless communications at the University of Warwick.">
-  <title>Tianyu Han — Wireless Communications Researcher</title>
+  <title>Tianyu Han</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+<a class="skip" href="#main">Skip to content</a>
 <nav class="nav">
   <div class="container nav-inner">
-    <a class="brand" href="index.html"><span class="brand-mark">TH</span> Tianyu Han</a>
+    <div class="brand">Tianyu Han</div>
     <div class="nav-links">
-      <a class="nav-link active" href="index.html">About</a>
-      <a class="nav-link" href="research.html">Research</a>
-      <a class="nav-link" href="publications.html">Publications</a>
-      <button class="cmd-btn" data-command-open>Navigate <kbd>⌘ K</kbd></button>
+      <a href="index.html" style="font-weight:700;color:#243044;background:#eef4ff">Home</a><a href="research.html">Research</a><a href="publications.html">Publications</a>
     </div>
   </div>
 </nav>
 
-<main>
-<section class="hero">
-  <canvas id="heroSpace"></canvas>
-  <div class="container hero-content">
-    <div>
-      <div class="eyebrow reveal">Tianyu Han · Student Member, IEEE</div>
-      <h1 class="reveal">Wireless Communications<br>Researcher</h1>
-      <div class="role reveal">PhD Researcher · University of Warwick</div>
-      <div class="hero-copy reveal">
-        I work on theoretical and analytical problems in future wireless systems, with interests in
-        communication theory, channel inference, distributed networks, reconfigurable spatial systems,
-        and satellite communications. This website is a personal academic profile — not a site about any
-        single technique.
-      </div>
-      <div class="hero-actions reveal">
-        <a class="btn primary" data-magnetic href="research.html">Explore research</a>
-        <a class="btn" data-magnetic href="publications.html">View publications</a>
-      </div>
-    </div>
 
-    <aside class="hero-side reveal">
-      <div class="side-label">Current role</div>
-      <div class="side-value">PhD Researcher, School of Engineering, University of Warwick</div>
-      <div class="side-label">Academic path</div>
-      <div class="side-value">BEng · Northeastern University (Qinhuangdao)<br>MSc · University of Warwick</div>
-      <div class="side-label">Research style</div>
-      <div class="side-value">Theory · Analysis · Statistical Signal Processing · System Design</div>
+<div class="container">
+  <header class="hero" aria-label="Homepage hero">
+    <div class="hero-cover" role="img" aria-label="Bright cosmic-ocean background representing a future among the stars and the sea"></div>
+    <div class="hero-body">
+      <div class="badge">Student Member, IEEE</div>
+      <h1>Tianyu Han</h1>
+      <p class="subtitle">PhD Researcher · University of Warwick</p>
+      <p class="statement">
+        I work on theoretical and analytical problems in future wireless communications, with interests in communication theory,
+        channel inference, distributed networks, reconfigurable spatial systems, and satellite communications.
+        The central spirit of this website is simple: our future is the stars and the sea.
+      </p>
+    </div>
+  </header>
+
+  <section class="profile-row" aria-label="Profile and photo">
+    <aside class="photo-card">
+      <img src="assets/profile-placeholder.svg" alt="Photo placeholder for Tianyu Han">
+      <div class="photo-note">
+        Photo area reserved for your portrait. To replace it, overwrite
+        <strong>assets/profile-placeholder.svg</strong> with your own photo file
+        (or change the image path in <strong>index.html</strong>).
+      </div>
     </aside>
-  </div>
-  <div class="scroll-indicator">
-    <div class="mouse"></div>
-    <span>Scroll</span>
-  </div>
-</section>
 
-<section class="section">
-  <div class="container section-header">
-    <div class="reveal">
-      <div class="kicker">Profile</div>
-      <h2>Personal academic identity.</h2>
-    </div>
-    <div>
-      <div class="prose reveal">
+    <div class="content-card prose">
+      <section class="section" style="margin-top:0;padding-top:0">
+        <h2>Brief Bio</h2>
         <p>
-          I received my <strong>BEng degree from Northeastern University (Qinhuangdao)</strong> in 2022 and my
-          <strong>MSc degree from the University of Warwick</strong> in 2023. I am currently pursuing a
-          <strong>PhD degree in Engineering at the University of Warwick</strong>. I am also a
-          <strong>Student Member of IEEE</strong>.
+          Tianyu Han received the BEng degree from Northeastern University (Qinhuangdao) in 2022,
+          and the MSc degree from the University of Warwick in 2023. He is currently pursuing the
+          PhD degree with the School of Engineering, University of Warwick. He is a Student Member of the IEEE.
         </p>
         <p>
-          My broader goal is to understand how future wireless systems can exploit spatial, temporal, and statistical
-          structure more effectively — especially when full channel information is difficult or expensive to obtain.
+          His current research interests include wireless communications, signal processing, channel inference and
+          reconstruction, distributed wireless networks, and satellite communications.
         </p>
-      </div>
+      </section>
+    </div>
+  </section>
 
-      <div class="stat-grid reveal">
-        <div class="stat-card">
-          <div class="stat-label">Current position</div>
-          <div class="stat-value">PhD Researcher<br>University of Warwick</div>
+  <main id="main" class="main">
+    <div class="content-card">
+      <section class="section prose" id="interests" style="margin-top:0;padding-top:0">
+        <h2>Research Interests</h2>
+        <div class="simple-grid">
+          <div class="info-box">
+            <div class="title">Wireless Communication Theory</div>
+            <div class="text">Analytical modeling, outage analysis, and mathematically interpretable system design.</div>
+          </div>
+          <div class="info-box">
+            <div class="title">Channel Inference & Reconstruction</div>
+            <div class="text">Using partial observations, historical CSI, and structure-aware methods to infer missing channel information.</div>
+          </div>
+          <div class="info-box">
+            <div class="title">Distributed Wireless Networks</div>
+            <div class="text">Cell-free architectures, interference management, and large-scale system analysis.</div>
+          </div>
+          <div class="info-box">
+            <div class="title">Satellite Communications</div>
+            <div class="text">Compact receive architectures, multi-user satellite links, and non-terrestrial communication systems.</div>
+          </div>
         </div>
-        <div class="stat-card">
-          <div class="stat-label">Awards</div>
-          <div class="stat-value">School of Engineering Taught Masters Scholarship<br>School of Engineering PhD Scholarship</div>
+      </section>
+
+      <section class="section" id="selected-publications">
+        <h2>Selected Publications</h2>
+        <div class="pub-list">
+          
+    <div class="pub-item">
+      <div class="pub-title"><a href="papers/cell-free-fama.html">Cell-Free Fluid Antenna Multiple Access Networks</a></div>
+      <div class="pub-meta">T. Han, Y. Zhu, K.-K. Wong, G. Zheng, and H. Shin<br>IEEE Transactions on Wireless Communications, 2025</div>
+      <div class="pub-actions"><a href="papers/cell-free-fama.html">Read summary</a> · <a href="https://doi.org/10.1109/TWC.2025.3559441" target="_blank" rel="noopener">DOI</a></div>
+    </div>
+    
+    <div class="pub-item">
+      <div class="pub-title"><a href="papers/satellite-fluid-array.html">Fluid Antenna Enabled Compact Ultra Massive Antenna Array for Satellite Communications</a></div>
+      <div class="pub-meta">T. Han, Y. Zhu, G. Zheng, and P.-D. M. Arapoglou<br>IEEE Journal on Selected Areas in Communications, 2026</div>
+      <div class="pub-actions"><a href="papers/satellite-fluid-array.html">Read summary</a> · <a href="https://doi.org/10.1109/JSAC.2025.3616279" target="_blank" rel="noopener">DOI</a></div>
+    </div>
+    
+    <div class="pub-item">
+      <div class="pub-title"><a href="papers/semi-blind-fas.html">Semi-Blind Fluid Antenna System: Port Selection via Statistical Analysis</a></div>
+      <div class="pub-meta">T. Han, Y. Zhu, K.-K. Wong, G. Zheng, C.-B. Chae, and X. You<br>IEEE Transactions on Wireless Communications, 2026</div>
+      <div class="pub-actions"><a href="papers/semi-blind-fas.html">Read summary</a> · <a href="https://doi.org/10.1109/TWC.2026.3722171" target="_blank" rel="noopener">DOI</a></div>
+    </div>
+    
         </div>
-        <div class="stat-card">
-          <div class="stat-label">Field</div>
-          <div class="stat-value">Wireless Communications<br>Signal Processing</div>
+        <p style="margin-top:14px"><a href="publications.html">View all publications →</a></p>
+      </section>
+    </div>
+
+    <aside class="side-card">
+      <div class="meta-list">
+        <div class="meta-item">
+          <div class="meta-title">Current Position</div>
+          <div class="meta-content">PhD Researcher, University of Warwick</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-title">Education</div>
+          <div class="meta-content">BEng, Northeastern University (Qinhuangdao)<br>MSc, University of Warwick</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-title">Scholarships</div>
+          <div class="meta-content">School of Engineering Taught Masters Scholarship<br>School of Engineering PhD Scholarship</div>
+        </div>
+        <div class="meta-item">
+          <div class="meta-title">Research Focus</div>
+          <div class="meta-content">Future wireless systems, statistical signal processing, and analytical communication models.</div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </aside>
+  </main>
 
-<section class="section alt">
-  <div class="container section-header">
-    <div class="reveal">
-      <div class="kicker">Timeline</div>
-      <h2>Background.</h2>
-    </div>
-    <div class="timeline reveal">
-      <div class="timeline-row">
-        <div class="timeline-year">2023 —</div>
-        <div>
-          <div class="timeline-title">PhD in Engineering</div>
-          <div class="timeline-meta">University of Warwick · School of Engineering<br>Supported by the School of Engineering PhD Scholarship.</div>
-        </div>
-      </div>
-      <div class="timeline-row">
-        <div class="timeline-year">2022–2023</div>
-        <div>
-          <div class="timeline-title">MSc Degree</div>
-          <div class="timeline-meta">University of Warwick · Supported by the School of Engineering Taught Masters Scholarship.</div>
-        </div>
-      </div>
-      <div class="timeline-row">
-        <div class="timeline-year">2018–2022</div>
-        <div>
-          <div class="timeline-title">BEng Degree</div>
-          <div class="timeline-meta">Northeastern University (Qinhuangdao).</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container section-header">
-    <div class="reveal">
-      <div class="kicker">Research</div>
-      <h2>Questions I work on.</h2>
-    </div>
-    <div class="research-grid">
-      <a class="research-card reveal" href="research.html#theory">
-        <div class="research-index">01 · Theory</div>
-        <h3>Wireless communication theory</h3>
-        <p>Analytical performance modeling, outage behavior, and mathematically interpretable system design.</p>
-      </a>
-      <a class="research-card reveal" href="research.html#inference">
-        <div class="research-index">02 · Inference</div>
-        <h3>Channel inference & reconstruction</h3>
-        <p>Recovering useful channel structure from incomplete observations, historical CSI, and known physical constraints.</p>
-      </a>
-      <a class="research-card reveal" href="research.html#distributed">
-        <div class="research-index">03 · Networks</div>
-        <h3>Distributed wireless networks</h3>
-        <p>Cell-free systems, interference management, and scalable architectures across many distributed nodes.</p>
-      </a>
-      <a class="research-card reveal" href="research.html#satellite">
-        <div class="research-index">04 · Satellite</div>
-        <h3>Satellite & non-terrestrial systems</h3>
-        <p>Compact arrays, multi-user satellite communications, and future non-terrestrial network architectures.</p>
-      </a>
-    </div>
-  </div>
-</section>
-
-<section class="section alt">
-  <div class="container">
-    <div class="cta-band reveal">
-      <div>
-        <div class="kicker">Selected work</div>
-        <h3>Publications and research projects</h3>
-        <p>
-          Publication pages are kept separate from the homepage. Each paper page includes a concise description of the
-          research question, the main idea, open links where available, and a citation.
-        </p>
-      </div>
-      <a class="btn primary" href="publications.html">Open publications</a>
-    </div>
-  </div>
-</section>
-</main>
-
-<footer class="footer">
-  <div class="container footer-row">
-    <div>© 2026 Tianyu Han</div>
-    <div>Personal academic website · Wireless communications</div>
-  </div>
-</footer>
-
-
-<div class="command-overlay">
-  <div class="command" role="dialog" aria-modal="true" aria-label="Quick navigation">
-    <input type="text" placeholder="Search pages or publications…">
-    <div class="command-list">
-      <div class="command-item" data-href="index.html"><span>About Tianyu Han</span><small>Home</small></div>
-      <div class="command-item" data-href="research.html"><span>Research</span><small>Overview</small></div>
-      <div class="command-item" data-href="publications.html"><span>Publications</span><small>Selected work</small></div>
-      <div class="command-item" data-href="papers/cell-free-fama.html"><span>Cell-Free Fluid Antenna Multiple Access Networks</span><small>TWC 2025</small></div>
-      <div class="command-item" data-href="papers/satellite-fluid-array.html"><span>Compact Ultra Massive Array for Satellite Communications</span><small>JSAC 2026</small></div>
-      <div class="command-item" data-href="papers/semi-blind-fas.html"><span>Semi-Blind Port Selection</span><small>TWC 2026</small></div>
-      <div class="command-item" data-href="papers/cell-free-performance.html"><span>Performance Analysis in Cell-Free Networks</span><small>GLOBECOM 2025</small></div>
-    </div>
-  </div>
+  <div class="footer">© 2026 Tianyu Han · Personal academic website</div>
 </div>
-
-<script src="script.js"></script>
 </body>
 </html>
