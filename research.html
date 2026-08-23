@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#05070a">
+  <title>Research — Tianyu Han</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<nav class="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="index.html"><span class="brand-mark">TH</span> Tianyu Han</a>
+    <div class="nav-links">
+      <a class="nav-link" href="index.html">About</a>
+      <a class="nav-link active" href="research.html">Research</a>
+      <a class="nav-link" href="publications.html">Publications</a>
+      <button class="cmd-btn" data-command-open>Navigate <kbd>⌘ K</kbd></button>
+    </div>
+  </div>
+</nav>
+
+<main>
+<section class="page-hero">
+  <div class="container">
+    <div class="eyebrow reveal">Research</div>
+    <h1 class="reveal">Future wireless systems through theory and inference.</h1>
+    <p class="reveal">
+      My research agenda is broader than any single antenna concept. I am interested in how spatial structure,
+      incomplete information, distributed operation, and non-terrestrial links reshape the design of future
+      wireless communication systems.
+    </p>
+  </div>
+</section>
+
+<section class="section" id="theory">
+  <div class="container section-header">
+    <div class="reveal"><div class="kicker">01</div><h2>Wireless communication theory</h2></div>
+    <div class="prose reveal">
+      <p>
+        A large part of my work develops mathematical models that explain how geometry, fading, interference,
+        and receiver architecture determine reliability and rate. The objective is to derive interpretable results
+        rather than only numerical outcomes.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="inference">
+  <div class="container section-header">
+    <div class="reveal"><div class="kicker">02</div><h2>Channel inference & reconstruction</h2></div>
+    <div class="prose reveal">
+      <p>
+        Full channel acquisition is often expensive. I study how useful channel information can be inferred from
+        partial observations, historical CSI, or known physical structure. This includes semi-blind strategies
+        and structured reconstruction methods.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="distributed">
+  <div class="container section-header">
+    <div class="reveal"><div class="kicker">03</div><h2>Distributed wireless networks</h2></div>
+    <div class="prose reveal">
+      <p>
+        Distributed architectures such as cell-free systems create new interactions between local antenna behavior,
+        interference, and scalability. I study how these effects can be analyzed and exploited at the network level.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="satellite">
+  <div class="container section-header">
+    <div class="reveal"><div class="kicker">04</div><h2>Satellite & non-terrestrial communications</h2></div>
+    <div class="prose reveal">
+      <p>
+        Non-terrestrial systems introduce different spatial and hardware constraints from terrestrial networks.
+        My work in this area studies compact receive architectures, multi-user satellite links, and analytical
+        design principles for future NTN systems.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="reconfigurable">
+  <div class="container section-header">
+    <div class="reveal"><div class="kicker">Related direction</div><h2>Reconfigurable spatial systems</h2></div>
+    <div class="prose reveal">
+      <p>
+        Reconfigurable antenna concepts, including fluid antenna systems, appear in part of my research because they
+        provide a useful way to study spatial degrees of freedom. They are one technique within a wider research
+        agenda, rather than the identity of the website.
+      </p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-row">
+    <div>© 2026 Tianyu Han</div>
+    <a href="publications.html">Publications →</a>
+  </div>
+</footer>
+
+
+<div class="command-overlay">
+  <div class="command" role="dialog" aria-modal="true" aria-label="Quick navigation">
+    <input type="text" placeholder="Search pages or publications…">
+    <div class="command-list">
+      <div class="command-item" data-href="index.html"><span>About Tianyu Han</span><small>Home</small></div>
+      <div class="command-item" data-href="research.html"><span>Research</span><small>Overview</small></div>
+      <div class="command-item" data-href="publications.html"><span>Publications</span><small>Selected work</small></div>
+      <div class="command-item" data-href="papers/cell-free-fama.html"><span>Cell-Free Fluid Antenna Multiple Access Networks</span><small>TWC 2025</small></div>
+      <div class="command-item" data-href="papers/satellite-fluid-array.html"><span>Compact Ultra Massive Array for Satellite Communications</span><small>JSAC 2026</small></div>
+      <div class="command-item" data-href="papers/semi-blind-fas.html"><span>Semi-Blind Port Selection</span><small>TWC 2026</small></div>
+      <div class="command-item" data-href="papers/cell-free-performance.html"><span>Performance Analysis in Cell-Free Networks</span><small>GLOBECOM 2025</small></div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
