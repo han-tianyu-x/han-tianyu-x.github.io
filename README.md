@@ -25,3 +25,14 @@ Upload the CONTENTS of this folder to the repository root.
 `index.html` must remain directly in the repository root.
 
 No npm, React, build tools, or backend are required.
+
+
+## Animated universe background
+
+The final version now uses `assets/space.js`, which renders a real full-screen HTML5 Canvas animation:
+- moving star field
+- drifting nebulae
+- animated planet and rings
+- occasional shooting stars
+
+This is intentionally much more visible than the previous subtle CSS-only animation.

@@ -25,6 +25,19 @@ a:hover{text-decoration:underline}
 img{max-width:100%;display:block}
 .container{width:min(var(--max),calc(100% - 56px));margin:auto;position:relative;z-index:2}
 
+#spaceCanvas{
+  position:fixed;
+  inset:0;
+  width:100%;
+  height:100%;
+  z-index:0;
+  display:block;
+  background:
+    radial-gradient(1100px 720px at 84% 12%,rgba(72,130,255,.18),transparent 54%),
+    radial-gradient(840px 600px at 13% 78%,rgba(142,91,255,.14),transparent 55%),
+    linear-gradient(180deg,#020712 0%,#071225 42%,#08162c 100%);
+}
+
 /* ---------- animated universe background ---------- */
 .space-bg{
   position:fixed;inset:0;z-index:0;overflow:hidden;
@@ -313,3 +326,5 @@ img{max-width:100%;display:block}
 @media(prefers-reduced-motion:reduce){
   .space-bg::before,.space-bg::after,.nebula,.planet{animation:none!important}
 }
+
+.space-bg{display:none!important}
